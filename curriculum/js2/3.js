@@ -5,8 +5,22 @@
  * @returns {array}
  */
 
-const solution = (a) => {
-  return [];
+const solution = (arr, newArr=[], i=0, j=2) => {
+  if(i === arr.length){
+    return newArr;
+  }
+  if(j < arr[i]){
+    if(arr[i]%j === 0){
+      newArr.push(1)
+      return solution(arr, newArr, i+1, j=2);
+    }
+    if(arr[i]%j != 0){
+      newArr.push(arr[i]);
+      return solution(arr, newArr, i+1, j=2);
+    }
+    return solution(arr, newArr, i, j+1);
+  }
+  return solution(arr, newArr, i+1, j=2);
 };
 
 module.exports = {
