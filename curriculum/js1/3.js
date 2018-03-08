@@ -5,8 +5,11 @@
  * @returns {string}
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (a, str='') => {
+  if(a <= 0){
+    return str;
+  };
+  return solution(a-1, str+'hello');
 };
 
 module.exports = {
