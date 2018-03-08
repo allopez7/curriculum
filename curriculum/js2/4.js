@@ -4,8 +4,11 @@
  * @returns {number}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (arr, i=0, sum=0) => {
+  if(i === arr.length || arr.length === 0){
+    return sum;
+  }
+  return solution(arr, i+1, sum + arr[i])
 };
 
 module.exports = {
