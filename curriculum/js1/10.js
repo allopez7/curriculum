@@ -8,9 +8,8 @@
  */
 
 const solution = (a, b, c) => {
-  setTimeout(() => { c() 
-    setTimeout(() => { c() }
-      , b)
+  setTimeout(() => { c()
+    setTimeout(c, b);
   }, a)
 };
 
