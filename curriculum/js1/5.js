@@ -5,8 +5,12 @@
  * @param {function} b
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (num, funct) => {
+  if(num <= 0){
+    return;
+  }
+  funct();
+  return solution(num-1, funct);
 };
 
 module.exports = {
